@@ -454,7 +454,7 @@ public class Universo
     public void IniciarSimulação() 
     {
 
-        StreamWriter escrita = new StreamWriter(@"C:\Users\HerikSarmento\Desktop\Faculdade\AED2\Arquivos\Saida.txt");
+        StreamWriter escrita = new StreamWriter("Saida.txt");
         escrita.WriteLine("{0};{1}", qntCorpos, qntIteracoes);
 
         for (int i = 0; i < qntIteracoes; i++)
@@ -475,7 +475,7 @@ class Program
     public static void Main(string[] args)
     {   
         char[] delimitadores = { ';', '\n', '<', '>','\r' };
-        StreamReader leitura = new StreamReader(@"C:\Users\HerikSarmento\Desktop\Faculdade\AED2\Arquivos\4CorposQuadrado.txt");
+        StreamReader leitura = new StreamReader("Entrada.txt");
         string leitor = leitura.ReadToEnd(); // Lendo o arquivo inteiro
         string[] LeituraCompleta = leitor.Split(delimitadores, StringSplitOptions.RemoveEmptyEntries); // Quebrando ele de acordo com os delimitadores
         leitura.Close();

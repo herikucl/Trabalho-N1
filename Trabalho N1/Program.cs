@@ -222,7 +222,7 @@ public class Corpo
     //Retorno dos valores das variaveis para mandar para o arquivo de saida
     public string log()
     {
-        return string.Format("<{0}>;<{1}>;<{2}>;<{3}>;<{4}>;<{5}>;<{6}>;", Nome, Massa, Raio, PosX, PosY, VelX, VelY);
+        return string.Format("{0};{1};{2};{3};{4};{5};{6}", Nome, Massa, Raio, PosX, PosY, VelX, VelY);
     }
 }
 
@@ -459,7 +459,7 @@ public class Universo
 
         for (int i = 0; i < qntIteracoes; i++)
         {
-            escrita.WriteLine("----------Interação{0}--------", i);
+            escrita.WriteLine("----------Interação{0}--------", i+1);
             for (int j = 0; j < qntCorpos; j++)
             {
                 escrita.WriteLine(CorposCelestes[j].log());
